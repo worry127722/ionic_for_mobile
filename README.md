@@ -4,6 +4,9 @@
 
 #### 安装必要的组件
   npm install -g cordova ionic
+  
+#### 添加要构建的应用类型
+  ionic platform add ios/android
 
 #### 构建应用
   ionic build ios/android
