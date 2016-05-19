@@ -1,0 +1,2 @@
+# ionic_for_mobile
+这是一个使用前端ionic和cordova产出的原生手机app
