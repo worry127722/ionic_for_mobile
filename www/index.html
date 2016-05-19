@@ -17,18 +17,55 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <!--<script src="ionic-native-transitions.js"></script>-->
 
     <!-- your app's js -->
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
+    <script src="js/controllers/tabs/tabs.js"></script>
+    <script src="js/controllers/home/home.js"></script>
+    <script src="js/controllers/news/news.js"></script>
+    <script src="js/controllers/news/news2.js"></script>
+    <script src="js/controllers/setting/setting.js"></script>
+    <script src="js/controllers/home/home.js"></script>
+
+    <script src="js/directive/home/homeLeftSide.directive.js"></script>
+
+    <script src="js/service/service.js"></script>
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+  <ion-side-menus>
+    <!-- Left menu -->
+    <ion-side-menu side="left" class="">
+
+      <home-left-side></home-left-side>
+
+    </ion-side-menu>
+
+    <ion-side-menu-content drag-content="false">
+
+      <ion-pane>
+        <ion-nav-bar class="bar-stable">
+          <ion-nav-back-button class="button-clear icon ion-ios-arrow-left">
+          </ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view animation="slide-left-right">
+        </ion-nav-view>
+
+      </ion-pane>
+
+    </ion-side-menu-content>
+
+    <!-- Right menu -->
+    <!--<ion-side-menu side="right" class="balanced-bg">-->
+    <!--</ion-side-menu>-->
+
+  </ion-side-menus>
+
+
+
+
+
   </body>
 </html>
